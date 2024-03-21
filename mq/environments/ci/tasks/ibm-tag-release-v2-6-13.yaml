@@ -19,7 +19,7 @@ spec:
     - name: skip-push
       default: ""
     - name: js-image
-      default: quay.io/jitesoft/node:latest
+      default: quay.io/ibmgaragecloud/node:lts-stretch
   results:
     - name: tag
   volumes:
@@ -31,7 +31,7 @@ spec:
         mountPath: $(params.source-dir)
   steps:
     - name: git-clone
-      image: quay.io/jitesoft/node:latest
+      image: quay.io/ibmgaragecloud/alpine-git
       env:
         - name: NAMESPACE
           valueFrom:
@@ -63,7 +63,7 @@ spec:
         # Need to create  branch to make release-it work
         git switch -c local
     - name: git-tag
-      image: quay.io/jitesoft/node:latest
+      image: $(params.js-image)
       workingDir: $(params.source-dir)
       script: |
         #!/usr/bin/env bash

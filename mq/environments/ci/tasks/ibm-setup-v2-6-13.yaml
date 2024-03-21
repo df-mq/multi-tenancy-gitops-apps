@@ -61,7 +61,7 @@ spec:
     - name: tools-image
       default: quay.io/ibmgaragecloud/ibmcloud-dev:v2.0.4
     - name: js-image
-      default: quay.io/ibmgaragecloud/node:lts-stretch
+      default: quay.io/jitesoft/node:latest
     - name: ace-project
       description: Name of the ACE Toolkit project
       default: ""
