@@ -63,7 +63,7 @@ spec:
         # Need to create  branch to make release-it work
         git switch -c local
     - name: git-tag
-      image: $(params.js-image)
+      image: quay.io/jitesoft/node:latest
       workingDir: $(params.source-dir)
       script: |
         #!/usr/bin/env bash
