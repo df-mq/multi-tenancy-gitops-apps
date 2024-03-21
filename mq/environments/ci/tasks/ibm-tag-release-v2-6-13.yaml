@@ -31,7 +31,7 @@ spec:
         mountPath: $(params.source-dir)
   steps:
     - name: git-clone
-      image: quay.io/crozltd/alpine-gitops
+      image: quay.io/crozltd/alpine-gitops:4
       env:
         - name: NAMESPACE
           valueFrom:
