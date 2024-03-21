@@ -31,7 +31,7 @@ spec:
         mountPath: $(params.source-dir)
   steps:
     - name: git-clone
-      image: quay.io/ibmgaragecloud/alpine-git
+      image: quay.io/jitesoft/node:latest
       env:
         - name: NAMESPACE
           valueFrom:
